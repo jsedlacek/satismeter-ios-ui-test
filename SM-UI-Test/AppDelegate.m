@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <SatisMeter/SatisMeter.h>
 
 @interface AppDelegate ()
 
@@ -16,7 +17,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    NSLog(@"Launching");
+
+    NSDictionary *traitsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                      @"James Bond" ,@"name",
+                                      @"Gold", @"plan",
+                                      @"2015-11-01T00:00:00.000Z", @"createdAt",
+                                      nil];
+    
+    [[SatisMeter sharedInstance] identifyUserWithUserId: @"007"
+                                               writeKey: @"K7eMIPEXyPMlG7fu"
+                                    andTraitsDictionary: traitsDictionary
+                                           andServerUrl: @"http://localhost:8080"];
+
     return YES;
 }
 

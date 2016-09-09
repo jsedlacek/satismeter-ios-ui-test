@@ -1,0 +1,15 @@
+PODS:
+  - GCDWebServer (3.3.3):
+    - GCDWebServer/Core (= 3.3.3)
+  - GCDWebServer/Core (3.3.3)
+  - SatisMeter (0.1.21)
+
+DEPENDENCIES:
+  - GCDWebServer (~> 3.0)
+  - SatisMeter
+
+SPEC CHECKSUMS:
+  GCDWebServer: 1c39a1f0763e4eb492bee021e4270fce097d3555
+  SatisMeter: 312f9696fa6c0d2c29216f8870cf8c016825a25e
+
+COCOAPODS: 0.39.0
